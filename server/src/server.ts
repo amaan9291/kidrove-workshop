@@ -28,7 +28,11 @@ app.use(express.json());
 app.get("/", (_req, res) => {
   res.json({
     success: true,
-    message: "Kidrove workshop API is running.",
+    message: "Kidrove Workshop API is running.",
+    endpoints: {
+      health: "/api/health",
+      enquiry: "/api/enquiry",
+    },
   });
 });
 
